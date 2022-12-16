@@ -73,19 +73,19 @@ function updateHeader(curr, turn, totalKm,) {
     currCountryTag.innerText = curr['country_name'];
 
 
-    Array.from(airports).forEach((airport) => {
-        const name = document.createElement('span');
-        const country = document.createElement('span');
-        const direction = document.createElement('span');
-        const type = document.createElement('span');
-        const dist = document.createElement('span');
+
 
         name.classList.add('airport-name');
         type.classList.add('airport-type');
         country.classList.add('airport-country');
         direction.classList.add('airport-direction');
         dist.classList.add('airport-dist');
-
+  Array.from(airports).forEach((airport) => {
+        const name = document.createElement('span');
+        const country = document.createElement('span');
+        const direction = document.createElement('span');
+        const type = document.createElement('span');
+        const dist = document.createElement('span');
         name.innerText = airport['airport_name'];
         type.innerText = airport['type'].split('_').join(' ');
         country.innerText = 'in ' + airport['country_name'] + ',';
@@ -111,4 +111,3 @@ function updateHeader(curr, turn, totalKm,) {
         li.append(name, type, country, direction, dist, co2);
         liItems.push(li);
         frag.append(li);}}
-
