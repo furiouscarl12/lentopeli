@@ -121,8 +121,9 @@ while dest == curr or (dist > 4000 or dist < 1500):
     index = input("\nKirjoita määränpään index: ")
     while not index.isdigit() or (int(index) >= len(airports) + 1 or int(index) < 1):
 
-    airport_dist = get_distance(curr['lat'], curr['long'], airports[index]['lat'], airports[index]['long'])
     dest_dist = get_distance(curr["lat"], curr["long"], dest["lat"], dest["long"])
+    airport_dist = get_distance(curr['lat'], curr['long'], airports[index]['lat'], airports[index]['long'])
+
 
 
     if airport_dist > dest_dist:
