@@ -1,4 +1,4 @@
-  *{
+   *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -60,6 +60,11 @@
         width: 600px;
         height: auto;
     }
+li {
+    display: flex;
+    padding: 0.2rem 0.8rem 0;
+    cursor: pointer;
+}
     .home-text h1{
         font-size: var(--big-font);
         color: var(--main-color);
@@ -173,16 +178,9 @@ airport-direction {
     padding: 0.2rem;
 }
 
-li {
-    display: flex;
-    padding: 0.2rem 0.6rem 0;
-    cursor: pointer;
-    gap: 0.2rem;
-}
 
 dest {
 
 }
-
 
 
